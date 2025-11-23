@@ -26,6 +26,28 @@ def soloTexto(texto):
     
     return True  # Todos los caracteres fueron letras
 
+def validarRut(texto):
+    if texto == "":
+        return False  # No aceptar vacío
+
+    for c in texto:
+        # Validar números
+        if c >= '0' and c <= '9':
+            continue
+
+        # Validar guion
+        if c == '-':
+            continue
+
+        # Validar letra K (mayúscula o minúscula)
+        if c == 'k' or c == 'K':
+            continue
+
+        # Si llega aquí, el caracter NO es permitido
+        return False
+
+    return True  # Todos los caracteres son válidos
+
 
 dato = input("Ingrese su edad: ")
  
