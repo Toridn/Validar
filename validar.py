@@ -8,6 +8,24 @@ def es_numero(texto):
     
     return True  
 
+def solo_letras(texto):
+    if texto == "":
+        return False  # No aceptar string vacío
+    
+    for c in texto:
+        # Validar letras mayúsculas
+        if c >= 'A' and c <= 'Z':
+            continue
+        
+        # Validar letras minúsculas
+        if c >= 'a' and c <= 'z':
+            continue
+        
+        # Si no es letra, retorna False
+        return False
+    
+    return True  # Todos los caracteres fueron letras
+
 
 dato = input("Ingrese su edad: ")
  
