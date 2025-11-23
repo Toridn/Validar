@@ -1,4 +1,4 @@
-def es_numero(texto):
+def soloNumero(texto):
     if texto == "":
         return False  
     
@@ -8,7 +8,7 @@ def es_numero(texto):
     
     return True  
 
-def solo_letras(texto):
+def soloTexto(texto):
     if texto == "":
         return False  # No aceptar string vacío
     
@@ -29,7 +29,7 @@ def solo_letras(texto):
 
 dato = input("Ingrese su edad: ")
  
-while not es_numero(dato):
+while not soloNumero(dato):
     print("ERROR: debe ingresar un número.")
     dato = input("Ingrese su edad nuevamente: ")
  
